@@ -1,0 +1,67 @@
+unit ScientificCalc_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, scControls,
+  scGPControls;
+
+type
+  TForm1 = class(TForm)
+    scGPPanel20: TscGPPanel;
+    Panel55: TPanel;
+    Shape3: TShape;
+    edtTopComputation: TEdit;
+    edtLowerComputation: TEdit;
+    Panel1: TPanel;
+    scGPPanel2: TscGPPanel;
+    scGPPanel3: TscGPPanel;
+    scGPPanel4: TscGPPanel;
+    scGPPanel5: TscGPPanel;
+    scGPPanel6: TscGPPanel;
+    scGPPanel7: TscGPPanel;
+    Panel2: TPanel;
+    scGPPanel1: TscGPPanel;
+    scGPPanel8: TscGPPanel;
+    scGPPanel9: TscGPPanel;
+    scGPPanel10: TscGPPanel;
+    Panel3: TPanel;
+    scGPPanel11: TscGPPanel;
+    scGPPanel12: TscGPPanel;
+    scGPPanel13: TscGPPanel;
+    scGPPanel14: TscGPPanel;
+    Panel4: TPanel;
+    scGPPanel15: TscGPPanel;
+    scGPPanel16: TscGPPanel;
+    scGPPanel17: TscGPPanel;
+    scGPPanel18: TscGPPanel;
+    Panel5: TPanel;
+    scGPPanel19: TscGPPanel;
+    scGPPanel21: TscGPPanel;
+    scGPPanel22: TscGPPanel;
+    scGPPanel23: TscGPPanel;
+    Panel6: TPanel;
+    scGPPanel24: TscGPPanel;
+    scGPPanel25: TscGPPanel;
+    scGPPanel26: TscGPPanel;
+    scGPPanel27: TscGPPanel;
+    Panel7: TPanel;
+    scGPPanel28: TscGPPanel;
+    scGPPanel29: TscGPPanel;
+    scGPPanel30: TscGPPanel;
+    scGPPanel31: TscGPPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

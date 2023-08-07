@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/21 18:01:57.000.841,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/05/27 16:55:30.000.655,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/08 20:22:13.000.470,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/27 06:27:57.000.807,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/05 10:20:39.000.460,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 12:30:05.000.749,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 12:30:22.000.771,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 12:30:39.000.572,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 12:36:06.000.354,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\MainCalc_u.pas=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 12:36:06.000.354,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\MainCalc_u.dfm=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/08/06 12:36:37.000.374,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\DelphiCalculator.dproj=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/08/06 12:38:31.000.702,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit2.pas</Transaction>
+    <Transaction>2023/08/06 12:38:55.000.856,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\NormalCalc_u.dfm=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit2.dfm</Transaction>
+    <Transaction>2023/08/06 12:38:55.000.856,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\NormalCalc_u.pas=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit2.pas</Transaction>
+    <Transaction>2023/08/06 15:39:20.000.725,=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 15:40:04.000.845,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\ScientificCalc_u.pas=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit1.pas</Transaction>
+    <Transaction>2023/08/06 15:40:04.000.845,C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\ScientificCalc_u.dfm=C:\Users\CIKGMata\Documents\Embarcadero\Studio\Projects\Delphi-Calculator\Unit1.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

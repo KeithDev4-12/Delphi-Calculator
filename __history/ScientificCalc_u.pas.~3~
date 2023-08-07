@@ -1,0 +1,39 @@
+unit ScientificCalc_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, scControls,
+  scGPControls;
+
+type
+  TForm1 = class(TForm)
+    scGPPanel20: TscGPPanel;
+    Panel55: TPanel;
+    Shape3: TShape;
+    edtTopComputation: TEdit;
+    edtLowerComputation: TEdit;
+    Panel1: TPanel;
+    scGPPanel2: TscGPPanel;
+    scGPPanel3: TscGPPanel;
+    scGPPanel4: TscGPPanel;
+    scGPPanel5: TscGPPanel;
+    scGPPanel6: TscGPPanel;
+    scGPPanel7: TscGPPanel;
+    scGPPanel38: TscGPPanel;
+    scGPPanel39: TscGPPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
