@@ -144,6 +144,8 @@ type
     procedure FormResize(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure HighlightButton(key: Integer);
+    procedure UnhighlightButton(key: Integer);
   private
     { Private declarations }
   public
@@ -178,21 +180,65 @@ end;
 
 procedure TfrmMain.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+  var
+  Control: TControl;
 begin
    // Check if the key pressed corresponds to a numeric key on the keyboard (e.g., 0-9)
   if (Key >= VK_NUMPAD0) and (Key <= VK_NUMPAD9) then
   begin
     HighlightButton(Key - VK_NUMPAD0);
   end;
+
+  if Key = VK_RETURN then begin
+     Control := ChildForm.FindComponent('scGPPanel' + IntToStr(key)) as TControl;
+     if Assigned(Control) and (Control is TscGPPanel) then
+     begin
+        TscGPPanel(Control).FillColorAlpha := 120
+     end;
+  end;
+
 end;
 
 procedure TfrmMain.FormKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
    // Check if the key released corresponds to a numeric key on the keyboard (e.g., 0-9)
-  if (Key >= Ord('0')) and (Key <= Ord('9')) then
+  if (Key >= VK_NUMPAD0) and (Key <= VK_NUMPAD9) then
   begin
-    UnhighlightButton(Key - Ord('0'));
+    UnhighlightButton(Key - VK_NUMPAD0);
+  end;
+end;
+
+procedure TfrmMain.HighlightButton(key: Integer);
+  var
+  Control: TControl;
+begin
+  // Find the button on the form with the matching 'Tag' property
+  Control := ChildForm.FindComponent('scGPPanel' + IntToStr(key)) as TControl;
+  if Assigned(Control) and (Control is TscGPPanel) then
+  begin
+    // Change the appearance of the button to indicate it was pressed
+    //TscGPPanel(Control).Font.Style := [fsBold];
+    TscGPPanel(Control).FillColorAlpha := 255
+    // You can also change the color or any other property to give visual feedback
+  end;
+end;
+
+procedure TfrmMain.UnhighlightButton(key: Integer);
+var
+  ControlButton,ControlLowEditText: TControl;
+begin
+  // Find the button on the form with the matching 'Tag' property
+  ControlButton := ChildForm.FindComponent('scGPPanel' + IntToStr(key)) as TControl;
+  ControlLowEditText := ChildForm.FindComponent('edtLowerComputation') as TControl;
+  if Assigned(ControlButton) and (ControlButton is TscGPPanel) then
+  begin
+    // Reset the appearance of the button to its default state
+    //TButton(Control).Font.Style := [];
+    TscGPPanel(ControlButton).FillColorAlpha := 230;
+    TEdit(ControlLowEditText).Text := TEdit(ControlLowEditText).Text + IntToStr(key);
+
+    // Reset any other property you've modified to give visual feedback
   end;
 end;
 

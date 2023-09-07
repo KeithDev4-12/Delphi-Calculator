@@ -14,6 +14,9 @@ object frmMain: TfrmMain
   OldCreateOrder = False
   StyleElements = [seFont, seClient]
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
   PixelsPerInch = 106
   TextHeight = 14
   object BorderPanel: TscGPPanel
@@ -63,10 +66,6 @@ object frmMain: TfrmMain
     Sizeable = True
     WallpaperIndex = -1
     WordWrap = False
-    ExplicitLeft = 56
-    ExplicitTop = -8
-    ExplicitWidth = 830
-    ExplicitHeight = 652
     DesignSize = (
       473
       624)
@@ -98,8 +97,6 @@ object frmMain: TfrmMain
       Caption = 'BackgroundPanel'
       StorePaintBuffer = False
       WordWrap = False
-      ExplicitWidth = 778
-      ExplicitHeight = 650
       DesignSize = (
         421
         622)
@@ -131,8 +128,6 @@ object frmMain: TfrmMain
         Caption = 'ClientPanel'
         StorePaintBuffer = False
         WordWrap = False
-        ExplicitWidth = 778
-        ExplicitHeight = 650
         object scPageViewer1: TscPageViewer
           Left = 0
           Top = 33
@@ -147,8 +142,6 @@ object frmMain: TfrmMain
               Page = scPVPDownloader
             end>
           ActivePage = scPVPDownloader
-          ExplicitWidth = 778
-          ExplicitHeight = 617
           object scPVPDownloader: TscPageViewerPage
             Left = 0
             Top = 0
@@ -175,8 +168,6 @@ object frmMain: TfrmMain
             StorePaintBuffer = False
             MouseWheelSupport = False
             BackgroundStyle = scsbsFormBackground
-            ExplicitWidth = 778
-            ExplicitHeight = 617
             object Panel10: TPanel
               Left = 0
               Top = 0
@@ -185,8 +176,6 @@ object frmMain: TfrmMain
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 0
-              ExplicitWidth = 778
-              ExplicitHeight = 617
               object Label11: TLabel
                 Left = 0
                 Top = 7
@@ -364,8 +353,6 @@ object frmMain: TfrmMain
                 Align = alClient
                 BevelOuter = bvNone
                 TabOrder = 0
-                ExplicitWidth = 742
-                ExplicitHeight = 539
                 object Panel14: TPanel
                   Left = 0
                   Top = 0
@@ -374,8 +361,6 @@ object frmMain: TfrmMain
                   Align = alClient
                   BevelOuter = bvNone
                   TabOrder = 0
-                  ExplicitWidth = 742
-                  ExplicitHeight = 539
                   object Panel30: TPanel
                     Left = 0
                     Top = 0
@@ -384,8 +369,6 @@ object frmMain: TfrmMain
                     Align = alClient
                     BevelOuter = bvNone
                     TabOrder = 0
-                    ExplicitWidth = 421
-                    ExplicitHeight = 539
                     object scGPPanel12: TscGPPanel
                       Left = 0
                       Top = 0
@@ -422,7 +405,7 @@ object frmMain: TfrmMain
                       FillColor2 = clNone
                       FrameColor = clBtnShadow
                       FrameColorAlpha = 10
-                      FrameRadius = 15
+                      FrameRadius = 0
                       ShowCaption = True
                       CaptionGlowEffect.Enabled = False
                       CaptionGlowEffect.Color = clHighlight
@@ -498,7 +481,6 @@ object frmMain: TfrmMain
           Sizeable = False
           WallpaperIndex = -1
           WordWrap = False
-          ExplicitWidth = 778
           object CloseButton: TscGPGlyphButton
             AlignWithMargins = True
             Left = 376
@@ -616,7 +598,6 @@ object frmMain: TfrmMain
             GroupIndex = 0
             AllowAllUp = False
             ToggleMode = False
-            ExplicitLeft = 733
           end
           object MinButton: TscGPGlyphButton
             AlignWithMargins = True
@@ -735,7 +716,6 @@ object frmMain: TfrmMain
             GroupIndex = 0
             AllowAllUp = False
             ToggleMode = False
-            ExplicitLeft = 643
           end
           object CaptionLabel: TscLabel
             Left = 0
@@ -770,7 +750,6 @@ object frmMain: TfrmMain
             ShowEllipsis = True
             UseFontColorToStyleColor = True
             Caption = 'Delphi Calculator'
-            ExplicitWidth = 643
           end
           object MaxButton: TscGPGlyphButton
             AlignWithMargins = True
@@ -889,7 +868,6 @@ object frmMain: TfrmMain
             GroupIndex = 0
             AllowAllUp = False
             ToggleMode = False
-            ExplicitLeft = 688
           end
         end
       end
@@ -940,7 +918,6 @@ object frmMain: TfrmMain
         HideControls = False
         Animation = True
         DisplayMode = scsvmOverlay
-        ExplicitHeight = 0
         object scPanel2: TscPanel
           Left = -250
           Top = 0
@@ -969,7 +946,6 @@ object frmMain: TfrmMain
           Caption = 'scPanel2'
           StorePaintBuffer = False
           WordWrap = False
-          ExplicitHeight = 0
           object scLabel7: TscLabel
             Left = 38
             Top = 38
@@ -1222,7 +1198,6 @@ object frmMain: TfrmMain
         HideControls = False
         Animation = True
         DisplayMode = scsvmOverlay
-        ExplicitHeight = 0
         object scPanel3: TscPanel
           Left = 0
           Top = 0
@@ -1251,7 +1226,6 @@ object frmMain: TfrmMain
           Caption = 'scPanel3'
           StorePaintBuffer = False
           WordWrap = False
-          ExplicitHeight = 0
           object scScrollBox1: TscScrollBox
             Left = 0
             Top = 51
@@ -1269,7 +1243,6 @@ object frmMain: TfrmMain
             StorePaintBuffer = False
             MouseWheelSupport = False
             BackgroundStyle = scsbsPanel
-            ExplicitHeight = 599
             object scListGroupPanel1: TscListGroupPanel
               Left = 0
               Top = 0
@@ -3235,7 +3208,6 @@ object frmMain: TfrmMain
         GroupIndex = 0
         AllowAllUp = False
         WordWrap = False
-        ExplicitTop = -40
       end
       object scGPSwitch1: TscGPSwitch
         Left = 57
@@ -3275,8 +3247,6 @@ object frmMain: TfrmMain
         BevelOuter = bvNone
         TabOrder = 3
         Visible = False
-        ExplicitLeft = -3
-        ExplicitTop = 267
         object Label23: TLabel
           Left = 64
           Top = 16
@@ -3510,7 +3480,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton12: TscButton
           Left = 0
@@ -3605,7 +3574,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton13: TscButton
           Left = 0
@@ -3700,7 +3668,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton14: TscButton
           Left = 0
@@ -3795,7 +3762,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton15: TscButton
           Left = 0
@@ -3890,7 +3856,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton16: TscButton
           Left = 0
@@ -3985,7 +3950,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton17: TscButton
           Left = 0
@@ -4080,7 +4044,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton4: TscButton
           Left = 0
@@ -4175,7 +4138,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton18: TscButton
           Left = 0
@@ -4270,7 +4232,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton19: TscButton
           Left = 0
@@ -4365,7 +4326,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton20: TscButton
           Left = 0
@@ -4460,7 +4420,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton21: TscButton
           Left = 0
@@ -4555,7 +4514,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton22: TscButton
           Left = 0
@@ -4650,7 +4608,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
       end
       object scButton23: TscButton
@@ -4746,9 +4703,6 @@ object frmMain: TfrmMain
         GroupIndex = 0
         AllowAllUp = False
         WordWrap = False
-        ExplicitLeft = -19
-        ExplicitTop = 249
-        ExplicitWidth = 250
       end
       object ScrollBox2: TScrollBox
         Left = 0
@@ -4855,7 +4809,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton3: TscButton
           Left = 0
@@ -4951,7 +4904,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton5: TscButton
           Left = 0
@@ -5046,7 +4998,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton7: TscButton
           Left = 0
@@ -5141,7 +5092,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton9: TscButton
           Left = 0
@@ -5236,7 +5186,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
         object scButton8: TscButton
           Left = 0
@@ -5331,7 +5280,6 @@ object frmMain: TfrmMain
           GroupIndex = 1
           AllowAllUp = False
           WordWrap = False
-          ExplicitWidth = 231
         end
       end
     end
@@ -5429,7 +5377,7 @@ object frmMain: TfrmMain
     Left = 8
     Top = 334
     Bitmap = {
-      494C01010B00F801C80130003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01010B00F801D40130003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000C000000090000000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

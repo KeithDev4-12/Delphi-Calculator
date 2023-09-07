@@ -13,7 +13,7 @@ object frmNormalCalc: TfrmNormalCalc
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnKeyPress = FormKeyPress
+  OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 106
   TextHeight = 14
@@ -93,7 +93,7 @@ object frmNormalCalc: TfrmNormalCalc
         Left = 3
         Top = 0
         Width = 379
-        Height = 42
+        Height = 32
         Margins.Top = 0
         Margins.Bottom = 0
         Align = alTop
@@ -103,7 +103,7 @@ object frmNormalCalc: TfrmNormalCalc
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clInfoText
-        Font.Height = -29
+        Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -115,9 +115,9 @@ object frmNormalCalc: TfrmNormalCalc
       object edtLowerComputation: TEdit
         AlignWithMargins = True
         Left = 3
-        Top = 42
+        Top = 32
         Width = 379
-        Height = 42
+        Height = 50
         Margins.Top = 0
         Margins.Bottom = 0
         Align = alTop
@@ -136,6 +136,7 @@ object frmNormalCalc: TfrmNormalCalc
         TabOrder = 1
         Text = '0'
         TextHint = '0'
+        OnChange = edtLowerComputationChange
       end
     end
     object Panel1: TPanel
@@ -152,7 +153,7 @@ object frmNormalCalc: TfrmNormalCalc
       BevelOuter = bvNone
       TabOrder = 1
       OnResize = Panel1Resize
-      object scGPPanel2: TscGPPanel
+      object scGPPanel301: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 4
@@ -172,8 +173,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -213,7 +214,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel3: TscGPPanel
+      object scGPPanel302: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 68
@@ -232,8 +233,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -273,7 +274,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel4: TscGPPanel
+      object scGPPanel303: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 132
@@ -292,8 +293,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -333,7 +334,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel5: TscGPPanel
+      object scGPPanel304: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 196
@@ -352,8 +353,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -393,7 +394,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel6: TscGPPanel
+      object scGPPanel305: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 260
@@ -412,8 +413,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 4
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -453,7 +454,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel7: TscGPPanel
+      object scGPPanel306: TscGPPanel
         Tag = 1
         AlignWithMargins = True
         Left = 324
@@ -472,8 +473,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 5
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -527,7 +528,7 @@ object frmNormalCalc: TfrmNormalCalc
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 2
-      object scGPPanel1: TscGPPanel
+      object scGPPanel300: TscGPPanel
         AlignWithMargins = True
         Left = 4
         Top = 1
@@ -546,8 +547,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -587,7 +588,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel8: TscGPPanel
+      object scGPPanel307: TscGPPanel
         AlignWithMargins = True
         Left = 100
         Top = 1
@@ -605,8 +606,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -646,7 +647,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel9: TscGPPanel
+      object scGPPanel308: TscGPPanel
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -664,8 +665,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -723,8 +724,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnClick = scGPPanel27Click
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -797,8 +799,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -856,8 +858,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -897,7 +899,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel13: TscGPPanel
+      object scGPPanel313: TscGPPanel
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -915,8 +917,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -974,8 +976,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnClick = scGPPanel27Click
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1029,7 +1032,8 @@ object frmNormalCalc: TfrmNormalCalc
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 4
-      object scGPPanel15: TscGPPanel
+      object scGPPanel7: TscGPPanel
+        Tag = 7
         AlignWithMargins = True
         Left = 4
         Top = 1
@@ -1048,8 +1052,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1089,7 +1094,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel16: TscGPPanel
+      object scGPPanel8: TscGPPanel
+        Tag = 8
         AlignWithMargins = True
         Left = 100
         Top = 1
@@ -1107,8 +1113,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1148,7 +1155,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel17: TscGPPanel
+      object scGPPanel9: TscGPPanel
+        Tag = 9
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -1166,8 +1174,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1225,8 +1234,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnClick = scGPPanel27Click
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1280,7 +1290,8 @@ object frmNormalCalc: TfrmNormalCalc
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 5
-      object scGPPanel19: TscGPPanel
+      object scGPPanel4: TscGPPanel
+        Tag = 4
         AlignWithMargins = True
         Left = 4
         Top = 1
@@ -1299,8 +1310,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1340,7 +1352,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel21: TscGPPanel
+      object scGPPanel5: TscGPPanel
+        Tag = 5
         AlignWithMargins = True
         Left = 100
         Top = 1
@@ -1358,8 +1371,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1399,7 +1413,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel22: TscGPPanel
+      object scGPPanel6: TscGPPanel
+        Tag = 6
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -1417,8 +1432,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1476,8 +1492,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnClick = scGPPanel27Click
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1531,7 +1548,8 @@ object frmNormalCalc: TfrmNormalCalc
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 6
-      object scGPPanel24: TscGPPanel
+      object scGPPanel1: TscGPPanel
+        Tag = 1
         AlignWithMargins = True
         Left = 4
         Top = 1
@@ -1550,8 +1568,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1591,7 +1610,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel25: TscGPPanel
+      object scGPPanel2: TscGPPanel
+        Tag = 2
         AlignWithMargins = True
         Left = 100
         Top = 1
@@ -1609,8 +1629,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1650,7 +1671,8 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel26: TscGPPanel
+      object scGPPanel3: TscGPPanel
+        Tag = 3
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -1668,8 +1690,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1727,8 +1750,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel2MouseEnter
-        OnMouseLeave = scGPPanel2MouseLeave
+        OnClick = scGPPanel27Click
+        OnMouseEnter = scGPPanel301MouseEnter
+        OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1801,8 +1825,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1842,7 +1866,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel29: TscGPPanel
+      object scGPPanel0: TscGPPanel
         AlignWithMargins = True
         Left = 100
         Top = 1
@@ -1860,8 +1884,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1919,8 +1944,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
-        OnMouseEnter = scGPPanel15MouseEnter
-        OnMouseLeave = scGPPanel15MouseLeave
+        OnClick = scGPPanel1Click
+        OnMouseEnter = scGPPanel7MouseEnter
+        OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
@@ -1960,7 +1986,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel31: TscGPPanel
+      object scGPPanel13: TscGPPanel
         AlignWithMargins = True
         Left = 292
         Top = 1
@@ -1978,8 +2004,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel31MouseEnter
-        OnMouseLeave = scGPPanel31MouseLeave
+        OnMouseEnter = scGPPanel13MouseEnter
+        OnMouseLeave = scGPPanel13MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor

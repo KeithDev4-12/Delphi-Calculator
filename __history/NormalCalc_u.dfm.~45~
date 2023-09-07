@@ -136,6 +136,7 @@ object frmNormalCalc: TfrmNormalCalc
         TabOrder = 1
         Text = '0'
         TextHint = '0'
+        OnChange = edtLowerComputationChange
       end
     end
     object Panel1: TPanel
@@ -897,7 +898,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel13: TscGPPanel
+      object scGPPanel313: TscGPPanel
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -1969,7 +1970,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel31: TscGPPanel
+      object scGPPanel13: TscGPPanel
         AlignWithMargins = True
         Left = 292
         Top = 1
@@ -1987,8 +1988,8 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel31MouseEnter
-        OnMouseLeave = scGPPanel31MouseLeave
+        OnMouseEnter = scGPPanel13MouseEnter
+        OnMouseLeave = scGPPanel13MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor

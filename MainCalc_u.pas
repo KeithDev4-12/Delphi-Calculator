@@ -141,7 +141,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure scButton2Click(Sender: TObject);
     procedure scButton3Click(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure HighlightButton(key: Integer);
@@ -180,26 +179,47 @@ end;
 
 procedure TfrmMain.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+  var
+  Control: TControl;
 begin
    // Check if the key pressed corresponds to a numeric key on the keyboard (e.g., 0-9)
   if (Key >= VK_NUMPAD0) and (Key <= VK_NUMPAD9) then
   begin
     HighlightButton(Key - VK_NUMPAD0);
   end;
+
+  if Key = VK_RETURN then begin
+     Control := ChildForm.FindComponent('scGPPanel' + IntToStr(key)) as TControl;
+     if Assigned(Control) and (Control is TscGPPanel) then
+     begin
+        TscGPPanel(Control).FillColorAlpha := 120
+     end;
+  end;
+
 end;
 
 procedure TfrmMain.FormKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+    var
+  Control: TControl;
 begin
    // Check if the key released corresponds to a numeric key on the keyboard (e.g., 0-9)
   if (Key >= VK_NUMPAD0) and (Key <= VK_NUMPAD9) then
   begin
     UnhighlightButton(Key - VK_NUMPAD0);
   end;
+
+  if Key = VK_RETURN then begin
+     Control := ChildForm.FindComponent('scGPPanel' + IntToStr(key)) as TControl;
+     if Assigned(Control) and (Control is TscGPPanel) then
+     begin
+        TscGPPanel(Control).FillColorAlpha := 150
+     end;
+  end;
 end;
 
 procedure TfrmMain.HighlightButton(key: Integer);
-var
+  var
   Control: TControl;
 begin
   // Find the button on the form with the matching 'Tag' property
@@ -229,17 +249,6 @@ begin
 
     // Reset any other property you've modified to give visual feedback
   end;
-end;
-
-procedure TfrmMain.FormResize(Sender: TObject);
-begin
-  {if Self.Width >= 650 then begin
-    scGPPanel1.Visible := True;
-    scGPPanel1.Width := 250;
-  end else begin
-    scGPPanel1.Visible := False;
-  end; }
-
 end;
 
 procedure TfrmMain.scButton2Click(Sender: TObject);

@@ -16,7 +16,6 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
-  OnResize = FormResize
   PixelsPerInch = 106
   TextHeight = 14
   object BorderPanel: TscGPPanel
@@ -420,7 +419,6 @@ object frmMain: TfrmMain
                       Sizeable = False
                       WallpaperIndex = -1
                       WordWrap = False
-                      ExplicitWidth = 321
                     end
                   end
                 end
@@ -5378,7 +5376,7 @@ object frmMain: TfrmMain
     Left = 8
     Top = 334
     Bitmap = {
-      494C01010B00F801D00130003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01010B00F801D40130003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000C000000090000000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

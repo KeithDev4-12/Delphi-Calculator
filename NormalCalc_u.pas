@@ -31,7 +31,7 @@ type
     Panel3: TPanel;
     scGPPanel11: TscGPPanel;
     scGPPanel12: TscGPPanel;
-    scGPPanel13: TscGPPanel;
+    scGPPanel313: TscGPPanel;
     scGPPanel14: TscGPPanel;
     Panel4: TPanel;
     scGPPanel7: TscGPPanel;
@@ -52,15 +52,15 @@ type
     scGPPanel28: TscGPPanel;
     scGPPanel0: TscGPPanel;
     scGPPanel30: TscGPPanel;
-    scGPPanel31: TscGPPanel;
+    scGPPanel13: TscGPPanel;
     Timer1: TTimer;
     Timer2: TTimer;
     procedure scGPPanel301MouseEnter(Sender: TObject);
     procedure scGPPanel301MouseLeave(Sender: TObject);
     procedure scGPPanel7MouseEnter(Sender: TObject);
     procedure scGPPanel7MouseLeave(Sender: TObject);
-    procedure scGPPanel31MouseEnter(Sender: TObject);
-    procedure scGPPanel31MouseLeave(Sender: TObject);
+    procedure scGPPanel13MouseEnter(Sender: TObject);
+    procedure scGPPanel13MouseLeave(Sender: TObject);
     procedure Panel1Resize(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
@@ -68,6 +68,9 @@ type
     function FormatNumberWithThousandSeparators(Value: Double): string;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure edtLowerComputationChange(Sender: TObject);
+    procedure scGPPanel1Click(Sender: TObject);
+    procedure scGPPanel27Click(Sender: TObject);
+    procedure scGPPanel13Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +82,8 @@ type
 var
   frmNormalCalc: TfrmNormalCalc;
   sLastText:String;
+  AOperatorFunction,AOperatorFunctionF:String;
+  FinalSum:Currency;
 
 implementation
 
@@ -93,7 +98,7 @@ begin
   begin
     // Format the number with thousand separators
     //edtLowerComputation.Text := FormatNumberWithThousandSeparators(Value);
-    edtLowerComputation.Text := FormatFloat('#,###', Value);
+    edtLowerComputation.Text := FormatFloat('####', Value);
   end;
 end;
 
@@ -185,14 +190,67 @@ begin
   (Sender as TscGPPanel).FillColorAlpha := 255;
 end;
 
-procedure TfrmNormalCalc.scGPPanel31MouseEnter(Sender: TObject);
+procedure TfrmNormalCalc.scGPPanel13Click(Sender: TObject);
+begin
+  edtTopComputation.Text := edtTopComputation.Text + edtLowerComputation.Text ;
+
+  if AOperatorFunctionF.Contains('+') then begin
+    edtLowerComputation.Text := CurrToStr(FinalSum + strToCurr(edtLowerComputation.Text));
+    FinalSum := (FinalSum + strToCurr(edtLowerComputation.Text));
+  end else if AOperatorFunctionF.Contains('-') then begin
+    edtLowerComputation.Text := CurrToStr(FinalSum - strToCurr(edtLowerComputation.Text));
+    FinalSum := (FinalSum - strToCurr(edtLowerComputation.Text));
+  end else if AOperatorFunctionF.Contains('×') then begin
+    edtLowerComputation.Text := CurrToStr(FinalSum * strToCurr(edtLowerComputation.Text));
+    FinalSum := (FinalSum * strToCurr(edtLowerComputation.Text));
+  end else if AOperatorFunctionF.Contains('÷') then begin
+    edtLowerComputation.Text := CurrToStr(FinalSum / strToCurr(edtLowerComputation.Text));
+    FinalSum := (FinalSum / strToCurr(edtLowerComputation.Text));
+  end;
+
+
+
+
+
+ { Case AOperatorFunctionF of
+       '+' : edtTopComputation.Caption.subtr;
+       '-' : ShowMessage('The colour is Green');
+       '÷' : ShowMessage('The colour is Blue');
+       '×' : ShowMessage('The colour is Yellow');
+  else ShowMessage('The colour is Unknown!');
+  end;  }
+
+end;
+
+procedure TfrmNormalCalc.scGPPanel13MouseEnter(Sender: TObject);
 begin
   (Sender as TscGPPanel).FillColorAlpha := 120;
 end;
 
-procedure TfrmNormalCalc.scGPPanel31MouseLeave(Sender: TObject);
+procedure TfrmNormalCalc.scGPPanel13MouseLeave(Sender: TObject);
 begin
   (Sender as TscGPPanel).FillColorAlpha := 150;
+end;
+
+procedure TfrmNormalCalc.scGPPanel1Click(Sender: TObject);
+begin
+  if Length(AOperatorFunction) <> 0 then begin
+    edtLowerComputation.Text := TscGPPanel(Sender).Caption;
+    AOperatorFunction := '';
+  end else begin
+    edtLowerComputation.Text := edtLowerComputation.Text + TscGPPanel(Sender).Caption ;
+  end;
+end;
+
+procedure TfrmNormalCalc.scGPPanel27Click(Sender: TObject);
+begin
+  edtTopComputation.Text := '';
+  edtTopComputation.Text := edtTopComputation.Text + edtLowerComputation.Text + ' ' + TscGPPanel(Sender).Caption + ' ' ;
+
+  AOperatorFunction := TscGPPanel(Sender).Caption;
+  AOperatorFunctionF := AOperatorFunction;
+  FinalSum := StrToCurr(Trim(StringReplace(edtTopComputation.Text,AOperatorFunction,'',[])));
+
 end;
 
 procedure TfrmNormalCalc.Timer1Timer(Sender: TObject);
@@ -222,58 +280,35 @@ begin
       width  := Round((Panel2.Width - 20) / 4);
       button.Width := width;
     end;
-  end;
 
-  for i := 0 to Panel3.ControlCount - 1 do
-  begin
-    // Check if the control is a button
     if Panel3.Controls[i] is TscGPPanel then
     begin
       button := TscGPPanel(Panel3.Controls[i]);
       width  := Round((Panel3.Width - 20) / 4);
       button.Width := width;
     end;
-  end;
 
-  for i := 0 to Panel4.ControlCount - 1 do
-  begin
-    // Check if the control is a button
     if Panel4.Controls[i] is TscGPPanel then
     begin
       button := TscGPPanel(Panel4.Controls[i]);
       width  := Round((Panel4.Width - 20) / 4);
       button.Width := width;
     end;
-  end;
 
-  for i := 0 to Panel5.ControlCount - 1 do
-  begin
-    // Check if the control is a button
     if Panel5.Controls[i] is TscGPPanel then
     begin
       button := TscGPPanel(Panel5.Controls[i]);
       width  := Round((Panel5.Width - 20) / 4);
       button.Width := width;
-
-      // Extract the width and height from the Tag property
-
     end;
-  end;
 
-  for i := 0 to Panel6.ControlCount - 1 do
-  begin
-    // Check if the control is a button
     if Panel6.Controls[i] is TscGPPanel then
     begin
       button := TscGPPanel(Panel6.Controls[i]);
       width  := Round((Panel6.Width - 20) / 4);
       button.Width := width;
     end;
-  end;
 
-  for i := 0 to Panel7.ControlCount - 1 do
-  begin
-    // Check if the control is a button
     if Panel7.Controls[i] is TscGPPanel then
     begin
       button := TscGPPanel(Panel7.Controls[i]);
@@ -281,7 +316,6 @@ begin
       button.Width := width;
     end;
   end;
-
 
 end;
 

@@ -93,7 +93,7 @@ object frmNormalCalc: TfrmNormalCalc
         Left = 3
         Top = 0
         Width = 379
-        Height = 42
+        Height = 32
         Margins.Top = 0
         Margins.Bottom = 0
         Align = alTop
@@ -103,7 +103,7 @@ object frmNormalCalc: TfrmNormalCalc
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clInfoText
-        Font.Height = -29
+        Font.Height = -19
         Font.Name = 'Segoe UI'
         Font.Style = [fsBold]
         ParentFont = False
@@ -115,9 +115,9 @@ object frmNormalCalc: TfrmNormalCalc
       object edtLowerComputation: TEdit
         AlignWithMargins = True
         Left = 3
-        Top = 42
+        Top = 32
         Width = 379
-        Height = 42
+        Height = 50
         Margins.Top = 0
         Margins.Bottom = 0
         Align = alTop
@@ -724,6 +724,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
+        OnClick = scGPPanel27Click
         OnMouseEnter = scGPPanel301MouseEnter
         OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
@@ -898,7 +899,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel13: TscGPPanel
+      object scGPPanel313: TscGPPanel
         AlignWithMargins = True
         Left = 196
         Top = 1
@@ -975,6 +976,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
+        OnClick = scGPPanel27Click
         OnMouseEnter = scGPPanel301MouseEnter
         OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
@@ -1050,6 +1052,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1110,6 +1113,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1170,6 +1174,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1229,6 +1234,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
+        OnClick = scGPPanel27Click
         OnMouseEnter = scGPPanel301MouseEnter
         OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
@@ -1304,6 +1310,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1364,6 +1371,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1424,6 +1432,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1483,6 +1492,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
+        OnClick = scGPPanel27Click
         OnMouseEnter = scGPPanel301MouseEnter
         OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
@@ -1558,6 +1568,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 0
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1618,6 +1629,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1678,6 +1690,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1737,6 +1750,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
+        OnClick = scGPPanel27Click
         OnMouseEnter = scGPPanel301MouseEnter
         OnMouseLeave = scGPPanel301MouseLeave
         BlurBackground = False
@@ -1870,6 +1884,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 1
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1929,6 +1944,7 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 2
+        OnClick = scGPPanel1Click
         OnMouseEnter = scGPPanel7MouseEnter
         OnMouseLeave = scGPPanel7MouseLeave
         BlurBackground = False
@@ -1970,7 +1986,7 @@ object frmNormalCalc: TfrmNormalCalc
         WallpaperIndex = -1
         WordWrap = False
       end
-      object scGPPanel31: TscGPPanel
+      object scGPPanel13: TscGPPanel
         AlignWithMargins = True
         Left = 292
         Top = 1
@@ -1988,8 +2004,9 @@ object frmNormalCalc: TfrmNormalCalc
         ParentFont = False
         FluentUIOpaque = False
         TabOrder = 3
-        OnMouseEnter = scGPPanel31MouseEnter
-        OnMouseLeave = scGPPanel31MouseLeave
+        OnClick = scGPPanel13Click
+        OnMouseEnter = scGPPanel13MouseEnter
+        OnMouseLeave = scGPPanel13MouseLeave
         BlurBackground = False
         BlurBackgroundAmount = 5
         BackgroundStyle = gppbsColor
